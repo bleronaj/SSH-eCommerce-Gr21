@@ -8,6 +8,9 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
 import swaggerApp from "./swaggerConfig.js";
+import reviewRoutes from './routes/reviewRoutes.js'; 
+import wishListRoutes from './routes/wishListRoutes.js'; 
+import addressRoutes from './routes/addressRoutes.js'; 
 
 dotenv.config();
 
@@ -22,6 +25,9 @@ app.use(morgan("dev"));
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/category", categoryRoutes);
 app.use("/api/v1/product", productRoutes);
+app.use('/api/v1/review', reviewRoutes); 
+app.use('/api/v1/wishlist', wishListRoutes); 
+app.use('/api/v1/address', addressRoutes); 
 
 // Use Swagger
 app.use(swaggerApp);
