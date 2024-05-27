@@ -11,6 +11,7 @@ import swaggerApp from "./swaggerConfig.js";
 import reviewRoutes from './routes/reviewRoutes.js'; 
 import wishListRoutes from './routes/wishListRoutes.js'; 
 import addressRoutes from './routes/addressRoutes.js'; 
+import faqRoutes from './routes/faqRoutes.js'; 
 
 dotenv.config();
 
@@ -28,6 +29,8 @@ app.use("/api/v1/product", productRoutes);
 app.use('/api/v1/review', reviewRoutes); 
 app.use('/api/v1/wishlist', wishListRoutes); 
 app.use('/api/v1/address', addressRoutes); 
+app.use('/api/v1/faq', faqRoutes); 
+
 
 // Use Swagger
 app.use(swaggerApp);
